@@ -1,5 +1,5 @@
-import { MemoryEngine } from "../packages/memory/src/index.js";
-import { assert, assertEqual, assertThrows, test } from "./assert.js";
+import { MemoryEngine } from "../packages/memory/src/index.ts";
+import { assert, assertEqual, assertThrows, test } from "./assert.ts";
 
 export async function runMemoryTests() {
   console.log("Running Memory Engine tests...");

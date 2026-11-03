@@ -4,7 +4,7 @@
  * untrack capability, and complete memory leak prevention.
  */
 
-import { MemoryEngine, defaultMemoryEngine } from "@mbuf/memory";
+import { MemoryEngine, defaultMemoryEngine } from "../../memory/src/index.ts";
 
 export interface Subscriber {
   readonly id: number;
@@ -14,6 +14,7 @@ export interface Subscriber {
 }
 
 export class DependencyEngine {
+  private memory: MemoryEngine;
   private nextSubscriberId = 1;
   // cellId -> Set of subscriber IDs
   private cellToSubscribers: Map<number, Set<number>> = new Map();
@@ -25,7 +26,8 @@ export class DependencyEngine {
   // Active subscriber stack for nested tracking
   private activeStack: (Subscriber | null)[] = [];
 
-  constructor(private memory: MemoryEngine = defaultMemoryEngine) {
+  constructor(memory: MemoryEngine = defaultMemoryEngine) {
+    this.memory = memory;
     this.memory.onCellRead = (cellId) => {
       this.track(cellId);
     };

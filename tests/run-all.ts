@@ -1,8 +1,8 @@
-import { runMemoryTests } from "./test-memory.js";
-import { runReactivityTests } from "./test-reactivity.js";
-import { runCompilerTests } from "./test-compiler.js";
-import { runSsrAndRouterTests } from "./test-ssr-router.js";
-import { runLifecycleEdgeCaseTests } from "./test-lifecycle-edgecases.js";
+import { runMemoryTests } from "./test-memory.ts";
+import { runReactivityTests } from "./test-reactivity.ts";
+import { runCompilerTests } from "./test-compiler.ts";
+import { runSsrAndRouterTests } from "./test-ssr-router.ts";
+import { runLifecycleEdgeCaseTests } from "./test-lifecycle-edgecases.ts";
 
 async function main() {
   console.log("=== MBUF Test Suite ===");

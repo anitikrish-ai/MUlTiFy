@@ -3,9 +3,9 @@
  * Reactive, fine-grained client-side router powered by MBUF memory cells.
  */
 
-import { cell, MemoryCellHandle } from "@mbuf/memory";
-import { element, when, ChildNode } from "@mbuf/renderer";
-import { registerCleanup } from "@mbuf/runtime";
+import { cell, type MemoryCellHandle } from "../../memory/src/index.ts";
+import { element, when, type ChildNode } from "../../renderer/src/index.ts";
+import { registerCleanup } from "../../runtime/src/index.ts";
 
 export interface RouteDefinition {
   path: string;

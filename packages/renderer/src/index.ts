@@ -4,7 +4,7 @@
  * keyed list reconciliation, and reactive bindings.
  */
 
-import { effect, registerCleanup } from "@mbuf/runtime";
+import { effect, registerCleanup } from "../../runtime/src/index.ts";
 
 export type ChildNode = Node | string | number | boolean | null | undefined | (() => any) | ChildNode[];
 
@@ -367,5 +367,5 @@ export function mount(rootNode: Node | (() => Node), container: HTMLElement | st
   };
 }
 
-export { renderToString } from "./ssr.js";
+export { renderToString } from "./ssr.ts";
 

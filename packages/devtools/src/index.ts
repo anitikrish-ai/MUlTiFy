@@ -3,8 +3,8 @@
  * In-browser developer tools, memory inspector, and reactive telemetry monitor.
  */
 
-import { defaultMemoryEngine, MemoryEngine } from "@mbuf/memory";
-import { element, text } from "@mbuf/renderer";
+import { defaultMemoryEngine, MemoryEngine } from "../../memory/src/index.ts";
+import { element, text } from "../../renderer/src/index.ts";
 
 export interface CellSnapshot {
   id: number;

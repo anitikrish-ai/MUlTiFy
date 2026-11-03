@@ -3,10 +3,12 @@
  * Deduplicated microtask batch scheduler with cycle detection and error isolation.
  */
 
-import { DependencyEngine, Subscriber, defaultDependencyEngine } from "@mbuf/dependency";
-import { MemoryEngine, defaultMemoryEngine } from "@mbuf/memory";
+import { DependencyEngine, type Subscriber, defaultDependencyEngine } from "../../dependency/src/index.ts";
+import { MemoryEngine, defaultMemoryEngine } from "../../memory/src/index.ts";
 
 export class Scheduler {
+  private dependencyEngine: DependencyEngine;
+  private memoryEngine: MemoryEngine;
   private queue: Set<Subscriber> = new Set();
   private isScheduled = false;
   private isFlushing = false;
@@ -14,9 +16,11 @@ export class Scheduler {
   private maxCycleCount = 1000;
 
   constructor(
-    private dependencyEngine: DependencyEngine = defaultDependencyEngine,
-    private memoryEngine: MemoryEngine = defaultMemoryEngine
+    dependencyEngine: DependencyEngine = defaultDependencyEngine,
+    memoryEngine: MemoryEngine = defaultMemoryEngine
   ) {
+    this.dependencyEngine = dependencyEngine;
+    this.memoryEngine = memoryEngine;
     // When any cell is written, notify all registered subscribers of that cell
     this.memoryEngine.onCellWritten = (cellId) => {
       const subs = this.dependencyEngine.getSubscribers(cellId);

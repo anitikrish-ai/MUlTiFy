@@ -1,5 +1,5 @@
-import { compile, Lexer, Parser } from "../packages/compiler/src/index.js";
-import { assert, assertEqual, test } from "./assert.js";
+import { compile, Lexer, Parser } from "../packages/compiler/src/index.ts";
+import { assert, assertEqual, test } from "./assert.ts";
 
 export async function runCompilerTests() {
   console.log("Running Compiler tests...");

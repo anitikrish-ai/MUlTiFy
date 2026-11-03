@@ -3,10 +3,10 @@
  * Compares MBUF indexed memory, slot recycling, and fine-grained reactivity.
  */
 
-import { MemoryEngine } from "../packages/memory/src/index.js";
-import { cell } from "../packages/memory/src/index.js";
-import { effect, computed } from "../packages/runtime/src/index.js";
-import { defaultScheduler, batch } from "../packages/scheduler/src/index.js";
+import { MemoryEngine } from "../packages/memory/src/index.ts";
+import { cell } from "../packages/memory/src/index.ts";
+import { effect, computed } from "../packages/runtime/src/index.ts";
+import { defaultScheduler, batch } from "../packages/scheduler/src/index.ts";
 
 declare const process: any;
 

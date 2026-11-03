@@ -1,7 +1,7 @@
-import { cell } from "../packages/memory/src/index.js";
-import { effect, computed } from "../packages/runtime/src/index.js";
-import { batch, defaultScheduler } from "../packages/scheduler/src/index.js";
-import { assert, assertEqual, assertThrows, test } from "./assert.js";
+import { cell } from "../packages/memory/src/index.ts";
+import { effect, computed } from "../packages/runtime/src/index.ts";
+import { batch, defaultScheduler } from "../packages/scheduler/src/index.ts";
+import { assert, assertEqual, assertThrows, test } from "./assert.ts";
 
 export async function runReactivityTests() {
   console.log("Running Reactivity & Scheduler tests...");

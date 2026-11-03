@@ -3,9 +3,9 @@
  * Reactive runtime primitives: effect, computed, createResource (async), and scope management.
  */
 
-import { cell, MemoryCellHandle, defaultMemoryEngine } from "@mbuf/memory";
-import { defaultDependencyEngine, Subscriber, untrack } from "@mbuf/dependency";
-import { defaultScheduler } from "@mbuf/scheduler";
+import { cell, type MemoryCellHandle, defaultMemoryEngine } from "../../memory/src/index.ts";
+import { defaultDependencyEngine, type Subscriber, untrack } from "../../dependency/src/index.ts";
+import { defaultScheduler } from "../../scheduler/src/index.ts";
 
 export interface EffectHandle {
   dispose(): void;

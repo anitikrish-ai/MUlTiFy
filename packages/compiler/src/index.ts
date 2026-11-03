@@ -28,11 +28,14 @@ export interface Token {
 const KEYWORDS = new Set(["app", "memory", "element", "text", "class", "style", "onClick", "onInput", "onChange"]);
 
 export class Lexer {
+  private input: string;
   private pos = 0;
   private line = 1;
   private col = 1;
 
-  constructor(private input: string) {}
+  constructor(input: string) {
+    this.input = input;
+  }
 
   public tokenize(): Token[] {
     const tokens: Token[] = [];

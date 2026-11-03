@@ -3,10 +3,10 @@
  * Main Unified Entry Point
  */
 
-import { cell, defaultMemoryEngine, MemoryCellHandle, MemoryStats } from "@mbuf/memory";
-import { defaultDependencyEngine, untrack } from "@mbuf/dependency";
-import { defaultScheduler, batch } from "@mbuf/scheduler";
-import { effect, computed, createResource, createScope, registerCleanup, Resource } from "@mbuf/runtime";
+import { cell, defaultMemoryEngine, MemoryCellHandle, MemoryStats } from "../../memory/src/index.ts";
+import { defaultDependencyEngine, untrack } from "../../dependency/src/index.ts";
+import { defaultScheduler, batch } from "../../scheduler/src/index.ts";
+import { effect, computed, createResource, createScope, registerCleanup, Resource } from "../../runtime/src/index.ts";
 import {
   element,
   text,
@@ -19,7 +19,7 @@ import {
   disposeTree,
   ChildNode,
   ElementProps
-} from "@mbuf/renderer";
+} from "../../renderer/src/index.ts";
 import {
   createComponent,
   onMount,
@@ -28,10 +28,10 @@ import {
   useContext,
   provideContext,
   Context
-} from "@mbuf/components";
-import { compile, Lexer, Parser, CodeGenerator } from "@mbuf/compiler";
-import { createRouter, RouterOptions, RouterInstance } from "@mbuf/router";
-import { inspectMemory, createDevToolsPanel, CellSnapshot } from "@mbuf/devtools";
+} from "../../components/src/index.ts";
+import { compile, Lexer, Parser, CodeGenerator } from "../../compiler/src/index.ts";
+import { createRouter, RouterOptions, RouterInstance } from "../../router/src/index.ts";
+import { inspectMemory, createDevToolsPanel, CellSnapshot } from "../../devtools/src/index.ts";
 
 // 1. Unified Memory API
 export const memory = {

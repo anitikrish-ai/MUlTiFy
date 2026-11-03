@@ -1,10 +1,10 @@
-import { MemoryEngine } from "../packages/memory/src/index.js";
-import { defaultDependencyEngine, untrack } from "../packages/dependency/src/index.js";
-import { cell, defaultMemoryEngine } from "../packages/memory/src/index.js";
-import { effect, createResource } from "../packages/runtime/src/index.js";
-import { defaultScheduler } from "../packages/scheduler/src/index.js";
-import { disposeTree, attachCleanup } from "../packages/renderer/src/index.js";
-import { assert, assertEqual, assertThrows, test } from "./assert.js";
+import { MemoryEngine } from "../packages/memory/src/index.ts";
+import { defaultDependencyEngine, untrack } from "../packages/dependency/src/index.ts";
+import { cell } from "../packages/memory/src/index.ts";
+import { effect, createResource } from "../packages/runtime/src/index.ts";
+import { defaultScheduler } from "../packages/scheduler/src/index.ts";
+import { disposeTree, attachCleanup } from "../packages/renderer/src/index.ts";
+import { assert, assertEqual, assertThrows, test } from "./assert.ts";
 
 export async function runLifecycleEdgeCaseTests() {
   console.log("Running Lifecycle & Advanced Edge-Case tests...");

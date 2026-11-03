@@ -1,7 +1,7 @@
-import { renderToString } from "../packages/renderer/src/ssr.js";
-import { createRouter } from "../packages/router/src/index.js";
-import { cell } from "../packages/memory/src/index.js";
-import { assert, assertEqual, test } from "./assert.js";
+import { renderToString } from "../packages/renderer/src/ssr.ts";
+import { createRouter } from "../packages/router/src/index.ts";
+import { cell } from "../packages/memory/src/index.ts";
+import { assert, assertEqual, test } from "./assert.ts";
 
 export async function runSsrAndRouterTests() {
   console.log("Running SSR and Router tests...");

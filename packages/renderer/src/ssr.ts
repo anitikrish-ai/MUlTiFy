@@ -3,7 +3,7 @@
  * Lightweight Server-Side Rendering (SSR) HTML string emitter.
  */
 
-import { ChildNode } from "./index.js";
+import type { ChildNode } from "./index.ts";
 
 /**
  * Serializes a DOM node, element, or function returning children into standard HTML string.

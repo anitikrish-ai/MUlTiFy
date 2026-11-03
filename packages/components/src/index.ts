@@ -3,7 +3,7 @@
  * Component definition, lifecycle hooks (onMount, onCleanup), and scoped context injection.
  */
 
-import { createScope, registerCleanup } from "@mbuf/runtime";
+import { createScope, registerCleanup } from "../../runtime/src/index.ts";
 
 export type ComponentFactory<P = any> = (props: P) => Node;
 
