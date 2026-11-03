@@ -16,6 +16,12 @@ export type TokenType =
   | "LPAREN"
   | "RPAREN"
   | "COMMA"
+  | "PLUS"
+  | "MINUS"
+  | "STAR"
+  | "SLASH"
+  | "SEMICOLON"
+  | "DOT"
   | "EOF";
 
 export interface Token {
@@ -86,6 +92,21 @@ export class Lexer {
         this.advance();
       } else if (ch === ",") {
         tokens.push({ type: "COMMA", value: ",", line: startLine, col: startCol });
+        this.advance();
+      } else if (ch === "+") {
+        tokens.push({ type: "PLUS", value: "+", line: startLine, col: startCol });
+        this.advance();
+      } else if (ch === "-") {
+        tokens.push({ type: "MINUS", value: "-", line: startLine, col: startCol });
+        this.advance();
+      } else if (ch === "*") {
+        tokens.push({ type: "STAR", value: "*", line: startLine, col: startCol });
+        this.advance();
+      } else if (ch === ";") {
+        tokens.push({ type: "SEMICOLON", value: ";", line: startLine, col: startCol });
+        this.advance();
+      } else if (ch === ".") {
+        tokens.push({ type: "DOT", value: ".", line: startLine, col: startCol });
         this.advance();
       } else if (ch === '"' || ch === "'") {
         tokens.push(this.readString(ch, startLine, startCol));

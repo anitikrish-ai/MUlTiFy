@@ -121,6 +121,6 @@ export function runBenchmarks() {
   console.log("=================================================");
 }
 
-if (typeof process !== "undefined" && import.meta.url === `file://${process.argv[1]?.replace(/\\/g, "/")}`) {
+if (typeof process !== "undefined") {
   runBenchmarks();
 }

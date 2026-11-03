@@ -1,4 +1,4 @@
-import { memory, ui, createComponent } from "../../packages/mbuf/src/index.js";
+import { memory, ui, createComponent } from "../../packages/mbuf/src/index.ts";
 
 export const DashboardApp = createComponent(() => {
   const cpuUsage = memory.cell(42);

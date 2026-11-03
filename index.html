@@ -149,14 +149,14 @@
   </footer>
 
   <script type="module">
-    import { memory, ui, devtools } from "./packages/mbuf/src/index.js";
-    import { CounterApp } from "./examples/counter/app.js";
-    import { TodoApp } from "./examples/todo/app.js";
-    import { DataTableApp } from "./examples/datatable/app.js";
-    import { DashboardApp } from "./examples/dashboard/app.js";
-    import { FormApp } from "./examples/form/app.js";
-    import { CartApp } from "./examples/cart/app.js";
-    import { compile } from "./packages/compiler/src/index.js";
+    import { memory, ui, devtools } from "./packages/mbuf/src/index.ts";
+    import { CounterApp } from "./examples/counter/app.ts";
+    import { TodoApp } from "./examples/todo/app.ts";
+    import { DataTableApp } from "./examples/datatable/app.ts";
+    import { DashboardApp } from "./examples/dashboard/app.ts";
+    import { FormApp } from "./examples/form/app.ts";
+    import { CartApp } from "./examples/cart/app.ts";
+    import { compile } from "./packages/compiler/src/index.ts";
 
     const container = document.getElementById("appContainer");
     let currentUnmount = null;

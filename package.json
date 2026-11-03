@@ -19,8 +19,12 @@
     "./devtools": "./packages/devtools/src/index.ts"
   },
   "scripts": {
-    "test": "node --loader ts-node/esm tests/run-all.ts",
-    "bench": "node --loader ts-node/esm benchmarks/benchmark.ts"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --experimental-strip-types tests/run-all.ts",
+    "bench": "node --experimental-strip-types benchmarks/benchmark.ts",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "ui",

@@ -1,4 +1,4 @@
-import { memory, ui, createComponent } from "../../packages/mbuf/src/index.js";
+import { memory, ui, createComponent } from "../../packages/mbuf/src/index.ts";
 
 export const CounterApp = createComponent(() => {
   const count = memory.cell(0);

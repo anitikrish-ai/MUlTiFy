@@ -1,4 +1,4 @@
-import { memory, ui, createComponent } from "../../packages/mbuf/src/index.js";
+import { memory, ui, createComponent } from "../../packages/mbuf/src/index.ts";
 
 interface Product {
   id: number;
