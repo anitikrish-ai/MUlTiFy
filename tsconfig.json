@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "mbuf": ["packages/mbuf/src/index.ts"],
+      "@mbuf/memory": ["packages/memory/src/index.ts"],
+      "@mbuf/dependency": ["packages/dependency/src/index.ts"],
+      "@mbuf/scheduler": ["packages/scheduler/src/index.ts"],
+      "@mbuf/renderer": ["packages/renderer/src/index.ts"],
+      "@mbuf/components": ["packages/components/src/index.ts"],
+      "@mbuf/compiler": ["packages/compiler/src/index.ts"],
+      "@mbuf/runtime": ["packages/runtime/src/index.ts"],
+      "@mbuf/router": ["packages/router/src/index.ts"],
+      "@mbuf/devtools": ["packages/devtools/src/index.ts"]
+    }
+  },
+  "include": [
+    "packages/**/src/**/*.ts",
+    "examples/**/*.ts",
+    "benchmarks/**/*.ts",
+    "tests/**/*.ts",
+    "types/**/*.d.ts"
+  ]
+}
+

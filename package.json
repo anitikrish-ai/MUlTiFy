@@ -1,0 +1,36 @@
+{
+  "name": "mbuf",
+  "version": "0.1.0",
+  "description": "Memory-Based UI Framework - Fine-grained reactive UI driven by indexed memory cells",
+  "type": "module",
+  "main": "./packages/mbuf/src/index.ts",
+  "module": "./packages/mbuf/src/index.ts",
+  "types": "./packages/mbuf/src/index.ts",
+  "exports": {
+    ".": "./packages/mbuf/src/index.ts",
+    "./memory": "./packages/memory/src/index.ts",
+    "./dependency": "./packages/dependency/src/index.ts",
+    "./scheduler": "./packages/scheduler/src/index.ts",
+    "./renderer": "./packages/renderer/src/index.ts",
+    "./components": "./packages/components/src/index.ts",
+    "./compiler": "./packages/compiler/src/index.ts",
+    "./runtime": "./packages/runtime/src/index.ts",
+    "./router": "./packages/router/src/index.ts",
+    "./devtools": "./packages/devtools/src/index.ts"
+  },
+  "scripts": {
+    "test": "node --loader ts-node/esm tests/run-all.ts",
+    "bench": "node --loader ts-node/esm benchmarks/benchmark.ts"
+  },
+  "keywords": [
+    "ui",
+    "framework",
+    "reactive",
+    "memory-based",
+    "fine-grained",
+    "compiler"
+  ],
+  "author": "MUlTiFy Core Team",
+  "license": "MIT"
+}
+
